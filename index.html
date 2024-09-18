@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 <body>
     <h1 class="general-tittle">Aplicación ciudades </h1>
     <p class="general-p">Llena el formulario para ver la ubicación de 5 ciudades</p>
-    <!-- formulario: primer ciudad -->
+     formulario: primer ciudad 
     <form class="general-form" > 
         <article class="general-form-row">
             <label>Ingresa primer ciudad </label>
@@ -25,15 +25,15 @@
         </article>
         <article class="general-form-row">
             <p>Tiempo</p>
-            <input id="tiempo" type="number" name="tiempo" placeholder="Tiempo 1 y 2 ciudad"/>
+            <input id="distancia" type="number" name="distancia" placeholder="Tiempo 1 y 2 ciudad"/>
         </article>
         <article class="general-form-buttons">
-            <button>Almacenar</button>
-            <button>Mostrar</button>
+            <button  id="mostrar">Mostrar</button>        
         </article>
     </form>
+   
     <section class="canva-cities-quantity">
-        <!-- Aqui van los nodoes de resultado -->
+         Aqui van los nodoes de resultado 
         <article class="canvas-city-row">
             <p class="first-city" ><strong>Trayecto:</strong></p><p class="first-city" >Bogota</p><p>-</p><p class="second-city">Cali</p><p class="hours">3 horas</p>
             
@@ -41,12 +41,55 @@
         <article class="canvas-city-row">
             <p class="first-city" ><strong>Trayecto:</strong></p><p class="first-city" >Cali</p><p>-</p><p class="second-city">Valledupar</p><p class="hours">20 horas</p>
         </article>
-    </section>
-    <section class="canva-output">
+
+        
+ 
         <p class="general-p">Puedes ver el resultado en el mapa</p>
-        <canvas></canvas>
-    </section>
+       
+        <div id="graph"></div>
+
     
     <script scr="./grafosCiudades.js"></script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafo de Ciudades</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <h1 class="general-tittle">Aplicación ciudades </h1>
+    <p class="general-p">Llena el formulario para ver la ubicación de 5 ciudades</p>
+    <!-- formulario: primer ciudad -->
+    <form class="general-form" > 
+            <article class="general-form-row">
+            <label>Ingresa primer ciudad </label>
+            <input id="ciudad1" type="text" name="ciudad1" placeholder="Nombre 1° ciudad"/>
+            </article>
+            <article class="general-form-row">
+            <label>Ingresa segunda ciudad </label>
+            <input id="ciudad2" type="text" name="ciudad2" placeholder="Nombre 2° ciudad"/>
+            </article>
+            <article class="general-form-row">
+            <p>Tiempo</p>
+            <input id="distancia" type="number" name="distancia" placeholder="Tiempo 1 y 2 ciudad"/>
+            </article>
+           
+        </div>
+    </form>
+    <article class="general-form-buttons">
+        <button class="" id="mostrar">Mostrar</button>
+        
+    </article>
+    
+    <div id="graph"></div>
+    
+    <script src="./grafosCiudades.js"></script>
 </body>
 </html>
